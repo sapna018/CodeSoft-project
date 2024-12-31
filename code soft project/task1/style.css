@@ -1,0 +1,224 @@
+/* Body Background Image */
+body {
+  /* background: url('.jpg') no-repeat center center/cover; */
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  background-color: white; 
+  margin: 0;
+  padding:0;
+  height: 100vh; /* Ensures it covers the full viewport height */
+}
+
+/* Header Section */
+header {
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+header:hover {
+  background: linear-gradient(135deg, #00bfff, #1e90ff);
+}
+
+/* Underline Effect for LinkedIn Link */
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  color: white; /* LinkedIn blue */
+  transition: color 0.3s ease;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white; /* Same as the link color */
+  transition: width 0.3s ease;
+}
+
+footer a:hover {
+  color: #0072b1 /* Darker shade on hover */
+}
+
+footer a:hover::after {
+  width: 100%; /* Expands the underline on hover */
+}
+
+
+/* About Section */
+#about {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#about img {
+  max-width: 150px;
+  transition: transform 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.1);
+}
+
+/* Skills Section */
+#skills .progress-bar {
+  transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+#skills .progress:hover .progress-bar {
+  background-color: #ff4500;
+}
+
+/* Projects Section */
+#projects .card {
+  border: 2px solid #00bfff;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Resume Section */
+#resume {
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+  color: white;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+#resume a {
+  text-decoration: none;
+  color: white;
+  background-color: #ff4500;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#resume a:hover {
+  background-color: #ff6347;
+}
+
+/* Contact Section */
+#contact h2 {
+  color: #1e90ff;
+}
+
+#contact form {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.2s;
+  position: relative;
+  color: #0072b1;
+}
+
+#contact a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+#contact a:hover {
+  color: #004182; /* Darker shade for LinkedIn */
+}
+
+#contact a:hover::after {
+  width: 100%; /* Expands underline on hover */
+}
+
+/* LinkedIn & Email Links Hover Effects */
+#contact a[href*="linkedin"] {
+  color: #0072b1;
+}
+
+#contact a[href*="linkedin"]:hover {
+  color: #004182;
+  transform: scale(1.1);
+}
+
+#contact a[href*="mailto"] {
+  color: #ff4500;
+}
+
+#contact a[href*="mailto"]:hover {
+  color: #b22222;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: #1e90ff;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff6347;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+  }
+
+  #skills .row {
+    flex-direction: column;
+  }
+
+  #projects .card {
+    margin-bottom: 20px;
+  }
+
+  #about img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  #skills .progress-bar {
+    font-size: 0.9rem;
+  }
+
+  #projects .card {
+    margin-bottom: 15px;
+    border: 1px solid #00bfff;
+  }
+}
+
+

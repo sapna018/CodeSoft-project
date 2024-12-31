@@ -1,0 +1,60 @@
+body{
+
+  background: linear-gradient(145deg , #e2ebf0, #cfdde2);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Roboto', sans-serif;
+}
+
+.calculator{
+  background: linear-gradient(145deg, #f3f8fa, #dce8ee);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #b3c2c9, -10px -10px 20px #ffffff;
+    width: 320px;
+    padding: 20px;
+}
+
+display {
+  background: #e8f0f3;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: right;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  box-shadow: inset 5px 5px 10px #c1ced4, inset -5px -5px 10px #ffffff;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  background: linear-gradient(145deg, #d4dee3, #f1f9fc);
+  box-shadow: 5px 5px 10px #b3c2c9, -5px -5px 10px #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 20px;
+  text-align: center;
+  color: #555;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 5px 5px 10px #c1ced4, inset -5px -5px 10px #ffffff;
+}
+
+.equal {
+  grid-column: span 2;
+  background: linear-gradient(145deg, #56ab2f, #a8e063);
+  color: #fff;
+}
+
+.zero {
+  grid-column: span 2;
+}
